@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayBackground"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/power_on_n" />
+
+        <com.app.utlcontroller.Controller.SmallSeperatorView
+            android:layout_width="@dimen/marginAmongComponents"
+            android:layout_height="match_parent"
+            android:id="@+id/seperatorGridPower_Switch"
+            />
+
+        <ImageView
+            android:id="@+id/imgMCBGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_toRightOf="@+id/imgPower"
+            android:src="@drawable/close_connector" />
+
+        <com.app.utlcontroller.Controller.SmallSeperatorView
+            android:layout_width="@dimen/marginAmongComponents"
+            android:id="@+id/seperatorMCBGrid"
+            android:layout_height="match_parent"
+            />
+
+        <ImageView
+            android:id="@+id/imgRectifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgConnector"
+            android:src="@drawable/rectifier_n" />
+
+    </LinearLayout>
+
+    <com.app.utlcontroller.Controller.TView
+        android:id="@+id/tView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/linearLayout1" />
+
+    <LinearLayout
+        android:id="@+id/invLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tView"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgInverter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/inverter_n" />
+
+        <com.app.utlcontroller.Controller.SmallSeperatorView
+            android:layout_width="@dimen/marginAmongComponents"
+            android:layout_height="match_parent"
+            android:id="@+id/seperatorInverter_STS"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/stsLayout"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_toRightOf="@+id/invLayout"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgSTS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgshapeT"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sts_n" />
+
+
+        <com.app.utlcontroller.Controller.LView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imgSTS"
+            android:id="@+id/lView"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgbyPassswitch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/stsLayout"
+        android:src="@drawable/manual_bypass_2_inputs" />
+
+    <com.app.utlcontroller.Controller.SmallSeperatorView
+        android:id="@+id/seperator2"
+        android:layout_width="@dimen/marginAmongComponents"
+        android:layout_height="4dp"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/imgbyPassswitch1"
+        android:background="@color/lines" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/seperator2">
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            android:text="Output" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/batteryLayout"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tView"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgshapeT"
+            android:layout_centerHorizontal="true"
+            android:background="#fff"
+            android:id="@+id/batterySwitch"
+            android:src="@drawable/close_connector" />
+
+        <com.app.utlcontroller.Controller.SmallVerticalSeperatorView
+            android:layout_width="4dp"
+            android:layout_height="40dp"
+            android:id="@+id/seperatorSwitchBattery"
+            android:background="@color/lines" />
+
+        <ImageView
+            android:id="@+id/imgBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgshapeT"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/batter_n" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgPowerByPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/power_off_n" />
+
+        <com.app.utlcontroller.Controller.SmallSeperatorView
+            android:layout_width="@dimen/marginAmongComponents"
+            android:layout_height="match_parent"
+            android:id="@+id/seperatorMCBByPassToSwitch"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/imgMCBByPass"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_toRightOf="@+id/imgPower"
+            android:src="@drawable/close_connector" />
+
+        <com.app.utlcontroller.Controller.SmallSeperatorView
+            android:layout_width="@dimen/marginAmongComponents"
+            android:id="@+id/seperatorMCBByPassToIsolation"
+            android:layout_height="match_parent"
+             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgConnector"
+            android:src="@drawable/isolation_trans_1" />
+
+    </LinearLayout>
+
+    <com.app.utlcontroller.Controller.SeperatorView
+        android:id="@+id/seperatorIsolation_Bypass"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/stsLayout"
+        android:layout_toRightOf="@+id/linearLayoutBottom"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/imgshapeT"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/seperatorIsolation_Bypass"
+        android:src="@drawable/manual_bypass_1_inputs" />
+
+</RelativeLayout>

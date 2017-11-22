@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrayBackground"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ENABLE EVENT LOG  "
+                android:textColor="@color/black"
+                android:textSize="@dimen/smallTextSize"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:id="@+id/checkEnableLogs"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="LOG INTERVAL  "
+                android:textColor="@color/black"
+                android:textSize="@dimen/smallTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:padding="8dp"
+                android:id="@+id/timerLogs"
+                android:text="50 Min"
+                android:textColor="@color/black"
+                android:textSize="@dimen/smallTextSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:gravity="center_vertical"
+            android:id="@+id/btnEraseLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/drawable_header"
+            android:padding="8dp"
+            android:text="ERASE LOG"
+            android:textColor="@color/white"
+            android:textSize="@dimen/leftMenuItemSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorSelected" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <Button
+                android:gravity="center_vertical"
+                android:id="@+id/btnSettingLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/drawable_header"
+                android:padding="7dp"
+                android:text="VIEW SETTING LOG"
+                android:textColor="@color/white"
+                android:textSize="@dimen/leftMenuItemSize" />
+
+            <Button
+                android:gravity="center_vertical"
+                android:id="@+id/btnLoadSettingLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/drawable_header"
+                android:padding="7dp"
+                android:text="LOAD SETTING LOG"
+                android:textColor="@color/white"
+                android:textSize="@dimen/leftMenuItemSize" />
+
+            <Button
+                android:gravity="center_vertical"
+                android:id="@+id/btnEventLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/drawable_header"
+                android:padding="7dp"
+                android:text="VIEW EVENT LOG"
+                android:textColor="@color/white"
+                android:textSize="@dimen/leftMenuItemSize" />
+
+            <Button
+                android:gravity="center_vertical"
+                android:id="@+id/btnConfigureLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/drawable_header"
+                android:padding="7dp"
+                android:text="VIEW CONFIGURE LOG"
+                android:textColor="@color/white"
+                android:textSize="@dimen/leftMenuItemSize" />
+
+            <Button
+                android:gravity="center_vertical"
+                android:id="@+id/btnLoadConfigureLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/drawable_header"
+                android:padding="7dp"
+                android:text="LOAD CONFIGURE LOG"
+                android:textColor="@color/white"
+                android:textSize="@dimen/leftMenuItemSize" />
+
+            <Button
+                android:gravity="center_vertical"
+                android:id="@+id/btnSendLogToUsb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/drawable_header"
+                android:padding="7dp"
+                android:text="SEND LOG TO USB"
+                android:textColor="@color/white"
+                android:textSize="@dimen/leftMenuItemSize" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

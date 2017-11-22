@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayBackground"
+    android:orientation="horizontal"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/btnTestIndiRelay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonselector_arrow"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:minWidth="200dp"
+                android:padding="20dp"
+                android:text="TEST INDIVIDUAL RELAYS"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+            <RadioButton
+                android:id="@+id/btnTestAllRelay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_arrow"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:minWidth="200dp"
+                android:padding="20dp"
+                android:text="TEST ALL RELAYS"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+
+            <RadioButton
+                android:id="@+id/btnTransferTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_arrow"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="200dp"
+                android:padding="20dp"
+                android:text="TRANSFER TEST "
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+            <RadioButton
+                android:id="@+id/btnBatteryTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_arrow"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="200dp"
+                android:padding="20dp"
+                android:text="BATTERY TEST "
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+            <RadioButton
+                android:id="@+id/btnResetAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_arrow"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="200dp"
+                android:padding="20dp"
+                android:text="RESET ALARM "
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+        </RadioGroup>
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"></ExpandableListView>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#fff"
+            android:visibility="gone"></ListView>
+
+        <LinearLayout
+            android:id="@+id/transferTestLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textByPass2Inv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_green"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:padding="20dp"
+                android:text="Start Transfer Test"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+<!--
+            <TextView
+                android:id="@+id/textByPass2Inv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/drawable_round_green"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:padding="20dp"
+                android:text="ByPass To Inverter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+-->
+
+            <TextView
+                android:id="@+id/txtInv2ByPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_green"
+                android:button="@null"
+                android:visibility="gone"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:padding="20dp"
+                android:text="Inverter To ByPass"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/batterytestLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtStartBatteryTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_green"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:padding="20dp"
+                android:text="Start Battery Test"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+            <TextView
+                android:id="@+id/txtBatteryTestResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="#ddd"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:padding="20dp"
+                android:text="Last Test Result"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bodyText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/allRelaystestLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/relaysTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_green"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:padding="20dp"
+                android:text="Test All relays"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/allResetAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/resetAlarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonselector_green"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:padding="20dp"
+                android:text="Reset Alarm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewRelays"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"
+            android:scrollbars="vertical"
+            android:background="#fff"
+            android:divider="@null"
+            android:paddingLeft="10dp"></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgTestLed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/icon_testled" />
+
+        <ImageView
+            android:id="@+id/imgRelay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/icon_relay" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_third"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtHeader_layout_system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imgCross"
+            android:background="@drawable/drawable_header"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="TEST INDIVIDUAL"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bodyText" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAcFailure"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="AC Failure"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnRectifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Rectifier Failure"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnLowBattery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Low battery voltage"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnRectOverTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Rectifier Over temp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnInverterF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Inverter Failure"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnInverterOverload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Inverter Overload"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnInvRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Inverter Volt out of Range"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnStaticSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Static switch failure"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnAcRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="AC volt out of range"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnHighDc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="High DC Voltag"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnRectifierOverload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Rectifier overload"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnInputAcBreakdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Input AC breaker open"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBatteryCkt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Battery Ckt Breaker Open"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnFanFailure"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Fan Failure"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnInverterOverTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Inverter Overtemp"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnOutputAcBreakdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonselector"
+                    android:gravity="center"
+                    android:text="Output AC breaker open"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

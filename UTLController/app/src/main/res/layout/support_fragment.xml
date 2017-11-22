@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup"
+        android:layout_marginRight="6dp"
+        >
+
+        <RadioButton
+            android:id="@+id/txtCustomerSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonselector_arrow"
+            android:gravity="center_vertical"
+            android:minWidth="160dp"
+            android:checked="true"
+            android:button="@null"
+            android:padding="20dp"
+            android:text="About Company \n and Contacts"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bodyText" />
+
+        <RadioButton
+            android:id="@+id/txtUserManual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="160dp"
+            android:button="@null"
+            android:background="@drawable/buttonselector_arrow"
+            android:gravity="center"
+            android:padding="25dp"
+            android:layout_marginTop="15dp"
+            android:text="User Manual  "
+            android:textColor="@color/white"
+            android:textSize="@dimen/bodyText" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/customerSupport"
+            android:padding="10dp"
+            style="@style/boldtextstyle"
+            android:id="@+id/valCustomerSupport"/>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/webView"
+            ></WebView>
+
+    </LinearLayout>
+
+</LinearLayout>

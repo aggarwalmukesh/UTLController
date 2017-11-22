@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UTLUps</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="customerSupport">\"Since 1945, La Marche has been providing reliable power conversion products. La Marche products include industrial battery chargers, rectifiers, power supplies, inverters and many more. We have built our reputation by controlling all aspects of the development process including design, in-house manufacturing and testing. La Marche is an ISO 9001:2008-certified manufacturer which includes 100% functional testing for every La Marche product. The Company is headquartered in Des Plaines, IL.\n\nContact-\nSales : sales@lamarchemfg.com\nPhone: 847-299-1188\nFax:     847-299-3061 \nEmergency Contact-  Phone: 847-296-8939\"</string>
+</resources>

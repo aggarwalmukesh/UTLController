@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorGrayBackground"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/layoutInput"
+            android:layout_marginRight="1dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientblue"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:text="INPUT"
+                android:textSize="@dimen/bodyText"
+                android:textColor="@color/white" />
+
+            <ListView
+                android:id="@+id/listInput"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:id="@+id/layoutBattery"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientblue"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/bodyText"
+                android:padding="8dp"
+                android:text="BATTERY"
+                android:textColor="@color/white" />
+
+            <ListView
+                android:id="@+id/listBattery"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </ListView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/layoutInverter"
+            android:layout_marginRight="1dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientblue"
+                android:textSize="@dimen/bodyText"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="INVERTER"
+                android:textColor="@color/white" />
+
+            <ListView
+                android:id="@+id/listInverter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical"
+                android:background="@color/white"
+                android:layout_weight="1">
+
+            </ListView>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:id="@+id/layoutByPass"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientblue"
+                android:textStyle="bold"
+                android:textSize="@dimen/bodyText"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="BYPASS"
+                android:textColor="@color/white" />
+
+            <ListView
+                android:id="@+id/listByPass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical"
+                android:layout_weight="1">
+
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/layoutLoad"
+            android:layout_marginRight="1dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientblue"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/bodyText"
+                android:text="LOAD"
+                android:textColor="@color/white" />
+
+            <ListView
+                android:id="@+id/listLoad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical"
+                android:layout_weight="1">
+
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:id="@+id/layoutSystem"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientblue"
+                android:gravity="center"
+                android:textSize="@dimen/bodyText"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:text="SYSTEM"
+                android:textColor="@color/white" />
+
+            <ListView
+                android:id="@+id/listSystem"
+                android:layout_width="match_parent"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_weight="1">
+
+            </ListView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
